@@ -1,3 +1,5 @@
+
+
 def greet
   greeting = ARGV.shift
   ARGV.each do |arg1|
