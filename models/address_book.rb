@@ -20,7 +20,6 @@ class AddressBook
   end
 
   def remove_entry(name, phone_number, email)
-    # "iterate over @entries until you find the match" = loop?
     @entries.each do |entry|
       if name == entry.name && phone_number == entry.phone_number && email == entry.email
         @entries.delete(entry)
