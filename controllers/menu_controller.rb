@@ -14,7 +14,8 @@ class MenuController
     puts "2 - Create an entry"
     puts "3 - Search for an entry"
     puts "4 - Import entries from a CSV"
-    puts "5 - Exit"
+    puts "5 - View Entry Number n"
+    puts "6 - Exit"
     print "Enter your selection: "
 
     selection = gets.to_i
@@ -36,7 +37,12 @@ class MenuController
        system "clear"
        read_csv
        main_menu
+       # assignment work is this #5
      when 5
+       system "clear"
+       view_entry_number
+       main_menu
+     when 6
        puts "Good-bye!"
 
        exit(0)
@@ -82,6 +88,14 @@ class MenuController
   end
 
   def read_csv
+  end
+
+  #assigment work is this method right below
+  def view_entry_number
+    system "clear"
+    puts "Viewing Entry Number"
+    #need to recall index of Entries array, but -1, to account for the 1st entry starting at index 0
+    #review array methods!!!!
   end
 
   def entry_submenu(entry)
