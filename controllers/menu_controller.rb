@@ -44,7 +44,6 @@ class MenuController
        main_menu
      when 6
        puts "Good-bye!"
-
        exit(0)
 
      else
@@ -55,7 +54,6 @@ class MenuController
   end
 
   def view_all_entries
-
     @address_book.entries.each do |entry|
       system "clear"
       puts entry.to_s
@@ -63,7 +61,7 @@ class MenuController
       entry_submenu(entry)
     end
 
-    sytem "clear"
+    system "clear"
     puts "End of entries"
   end
 
@@ -92,10 +90,18 @@ class MenuController
 
   #assigment work is this method right below
   def view_entry_number
-    system "clear"
-    puts "Viewing Entry Number"
-    #need to recall index of Entries array, but -1, to account for the 1st entry starting at index 0
-    #review array methods!!!!
+    print "Entry number to view: "
+    selection = gets.chomp.to_i
+
+    if selection < @address_book.entries.count
+      puts @address_book.entries[selection]
+      puts "Press enter to return to the main menu"
+      gets.chomp
+      system "clear"
+    else
+      puts "#{selection} is not a valid input"
+      view_entry_number
+    end
   end
 
   def entry_submenu(entry)
