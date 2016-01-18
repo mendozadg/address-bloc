@@ -46,7 +46,38 @@ class AddressBook
         lower = mid + 1
       end
     end
-    
+
+    return nil
+  end
+
+  #assignment: first attempt, got stuck
+  # def iterative_search(name)
+  #   @entries.each do |entry|
+  #     if name == entry
+  #       p entry
+  #     elsif name
+  #     else
+  #   end
+  # end
+
+  #assignment: second attempt, using hint from video
+  # def iterative_search(name)
+  #   @entries.each do |entry|
+  #     if entry.name == name
+  #       return entry.name
+  #     else
+  #       return nil
+  #     end
+  #   end
+  # end
+
+  #assignment: third & final attempt, having watched full video
+  def iterative_search(name)
+    @entries.each do |entry|
+      if entry.name == name
+        return entry
+      end
+    end
     return nil
   end
 
