@@ -43,6 +43,7 @@ end
 def entry_submenu(entry)
 	puts "\nn - next entry"
 	puts "d - delete entry"
+	#puts "x - demolish all entries!!!"
 	puts "e - edit this entry"
 	puts "m - return to main menu"
 
@@ -52,6 +53,8 @@ def entry_submenu(entry)
 	when "n"
 	when "d"
 		delete_entry(entry)
+	#when "x"
+		#demolish_entries(entry)
 	when "e"
 		edit_entry(entry)
 		entry_submenu(entry)
@@ -105,7 +108,8 @@ def search_submenu(entry)
 	end
 end
 
-
+#def demolish
+#end
 
 
 
